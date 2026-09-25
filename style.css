@@ -487,3 +487,257 @@ body.dark .example-english {
 body.dark .example-vietnamese {
     color: var(--muted);
 }
+/* =========================================
+   FLASHCARD DETAIL
+========================================= */
+
+.flashcard-detail-card {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Back Button */
+
+.back-button {
+    border: none;
+    background: transparent;
+    color: var(--primary);
+    font-size: 15px;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 28px;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+
+/* Flashcard Header */
+
+.flashcard-header {
+    margin-bottom: 30px;
+}
+
+.flashcard-header h1 {
+    font-size: 42px;
+    margin: 0 0 8px 0;
+}
+
+.main-pronunciation {
+    color: var(--muted);
+    font-size: 18px;
+}
+
+
+/* Detail Section */
+
+.detail-section {
+    margin-top: 30px;
+}
+
+.detail-section h2 {
+    font-size: 21px;
+    margin-bottom: 15px;
+    color: var(--text);
+}
+
+.main-meaning {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.explanation {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   EXAMPLES
+========================================= */
+
+.examples-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.example-card {
+    background: var(--hover);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.example-english {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.example-vietnamese {
+    margin-top: 6px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   WORD FAMILY
+========================================= */
+
+.word-family-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.word-family-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.word-family-table th {
+    background: var(--hover);
+    color: var(--muted);
+    text-align: left;
+    padding: 14px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.word-family-table td {
+    padding: 16px 14px;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.5;
+}
+
+.family-pronunciation {
+    white-space: nowrap;
+    color: var(--muted);
+}
+
+
+/* =========================================
+   WORD FAMILY EXAMPLE
+========================================= */
+
+.family-example {
+    margin-top: 10px;
+    padding-top: 9px;
+    border-top: 1px dashed var(--border);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.example-label {
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.family-example-vietnamese {
+    color: var(--muted);
+    margin-top: 3px;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark .flashcard-detail-card {
+    background: var(--surface) !important;
+    color: var(--text);
+    border-color: var(--border);
+}
+
+body.dark .flashcard-detail-card h1,
+body.dark .flashcard-detail-card h2,
+body.dark .flashcard-detail-card p {
+    color: var(--text);
+}
+
+body.dark .main-pronunciation,
+body.dark .explanation,
+body.dark .family-pronunciation {
+    color: var(--muted);
+}
+
+body.dark .example-card {
+    background: #172033 !important;
+    border-color: var(--border);
+}
+
+body.dark .example-english {
+    color: var(--text);
+}
+
+body.dark .example-vietnamese {
+    color: var(--muted);
+}
+
+body.dark .word-family-table {
+    border-color: var(--border);
+}
+
+body.dark .word-family-table th {
+    background: #172033;
+    color: var(--muted);
+}
+
+body.dark .word-family-table td {
+    color: var(--text);
+    border-color: var(--border);
+}
+
+body.dark .family-example {
+    border-color: var(--border);
+    color: var(--text);
+}
+
+body.dark .family-example-vietnamese {
+    color: var(--muted);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .flashcard-detail-card {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .flashcard-header h1 {
+        font-size: 32px;
+    }
+
+    .main-pronunciation {
+        font-size: 16px;
+    }
+
+    .detail-section {
+        margin-top: 24px;
+    }
+
+    .word-family-table {
+        min-width: 700px;
+    }
+
+}
