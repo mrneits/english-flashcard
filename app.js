@@ -729,15 +729,22 @@ function showAddFlashcard() {
 
             <div class="import-actions">
 
-                <button
-                    id="previewButton"
-                    class="primary-button"
-                >
-                    Preview
-                </button>
+    <button
+        id="previewButton"
+        class="primary-button"
+    >
+        Preview
+    </button>
 
-            </div>
+    <button
+        id="saveButton"
+        class="secondary-button"
+        style="display: none;"
+    >
+        💾 Save Flashcard
+    </button>
 
+</div>
 
             <div
                 id="previewContainer"
@@ -818,7 +825,249 @@ function previewImportedFlashcard() {
         return;
 
     }
+// =========================================
+// SAVE FLASHCARD TO SUPABASE
+// =========================================
 
+async function saveImportedFlashcard() {
+
+    const input =
+        document.getElementById("jsonInput");
+
+    const error =
+        document.getElementById("importError");
+
+    const saveButton =
+        document.getElementById("saveButton");
+
+
+    error.textContent = "";
+
+
+    const rawText =
+        input.value.trim();
+
+
+    if (!rawText) {
+
+        error.textContent =
+            "Please paste the Flashcard JSON first.";
+
+        return;
+
+    }
+
+
+    let data;
+
+
+    try {
+
+        data = JSON.parse(rawText);
+
+    } catch (e) {
+
+        error.textContent =
+            "Invalid JSON.";
+
+        return;
+
+    }
+
+
+    // =========================================
+    // VALIDATE DATA
+    // =========================================
+
+    if (
+        !data.word ||
+        !data.meaning ||
+        !data.examples ||
+        !data.wordFamily
+    ) {
+
+        error.textContent =
+            "The Flashcard data is incomplete.";
+
+        return;
+
+    }
+
+
+    saveButton.disabled = true;
+
+    saveButton.textContent = "Saving...";
+
+
+    try {
+
+        // =========================================
+        // 1. INSERT FLASHCARD
+        // =========================================
+
+        const { data: flashcard, error: flashcardError } =
+            await supabaseClient
+
+                .from("flashcards")
+
+                .insert({
+
+                    word: data.word,
+
+                    pronunciation:
+                        data.pronunciation || null,
+
+                    meaning:
+                        data.meaning,
+
+                    explanation:
+                        data.explanation || null
+
+                })
+
+                .select()
+
+                .single();
+
+
+        if (flashcardError) {
+
+            throw flashcardError;
+
+        }
+
+
+        const flashcardId =
+            flashcard.id;
+
+
+        // =========================================
+        // 2. INSERT EXAMPLES
+        // =========================================
+
+        if (
+            Array.isArray(data.examples) &&
+            data.examples.length > 0
+        ) {
+
+            const exampleRows =
+                data.examples.map(example => ({
+
+                    flashcard_id:
+                        flashcardId,
+
+                    english:
+                        example.english,
+
+                    vietnamese:
+                        example.vietnamese || null
+
+                }));
+
+
+            const { error: examplesError } =
+                await supabaseClient
+
+                    .from("examples")
+
+                    .insert(exampleRows);
+
+
+            if (examplesError) {
+
+                throw examplesError;
+
+            }
+
+        }
+
+
+        // =========================================
+        // 3. INSERT WORD FAMILY
+        // =========================================
+
+        if (
+            Array.isArray(data.wordFamily) &&
+            data.wordFamily.length > 0
+        ) {
+
+            const wordFamilyRows =
+                data.wordFamily.map(item => ({
+
+                    flashcard_id:
+                        flashcardId,
+
+                    word:
+                        item.word,
+
+                    pronunciation:
+                        item.pronunciation || null,
+
+                    part_of_speech:
+                        item.partOfSpeech || null,
+
+                    meaning:
+                        item.meaning || null,
+
+                    example_english:
+                        item.exampleEnglish || null,
+
+                    example_vietnamese:
+                        item.exampleVietnamese || null
+
+                }));
+
+
+            const { error: wordFamilyError } =
+                await supabaseClient
+
+                    .from("word_family")
+
+                    .insert(wordFamilyRows);
+
+
+            if (wordFamilyError) {
+
+                throw wordFamilyError;
+
+            }
+
+        }
+
+
+        // =========================================
+        // SUCCESS
+        // =========================================
+
+        alert(
+            "Flashcard saved successfully!"
+        );
+
+
+        location.reload();
+
+
+        } catch (saveError) {
+
+        console.error(
+            "Save Flashcard Error:",
+            saveError
+        );
+
+
+        error.textContent =
+            saveError.message ||
+            "Failed to save Flashcard.";
+
+
+        saveButton.disabled = false;
+
+        saveButton.textContent =
+            "💾 Save Flashcard";
+
+    }
+
+}
 
     // =========================================
     // BASIC VALIDATION
