@@ -1,12 +1,6 @@
-// ==========================================
-// ENGLISH FLASHCARDS
-// APP.JS - VERSION 2
-// ==========================================
-
-
-// ==========================================
-// SAMPLE DATA
-// ==========================================
+// =========================================
+// SAMPLE FLASHCARD DATA
+// =========================================
 
 const flashcards = [
 
@@ -14,38 +8,31 @@ const flashcards = [
         id: 1,
 
         word: "pet",
-
         pronunciation: "/pet/",
 
-        meaning: "vuốt ve, xoa, âu yếm",
+        meaning: "vuốt ve, cưng nựng; thú cưng",
 
         explanation:
-            "Pet có thể là danh từ, động từ hoặc tính từ. Khi là động từ, pet có nghĩa là vuốt ve hoặc xoa một con vật.",
+            "Pet can be used as a verb meaning to touch or stroke an animal gently. It can also be used as a noun meaning an animal kept for companionship.",
 
         wordFamily: [
 
             {
                 word: "pet",
-                type: "Noun",
-                meaning: "thú cưng",
-                exampleEnglish: "I have two pets.",
-                exampleVietnamese: "Tôi có hai con thú cưng."
-            },
-
-            {
-                word: "pet",
-                type: "Verb",
-                meaning: "vuốt ve, xoa",
+                pronunciation: "/pet/",
+                type: "verb / noun",
+                meaning: "vuốt ve; thú cưng",
                 exampleEnglish: "Can I pet your dog?",
-                exampleVietnamese: "Tôi có thể vuốt ve chó của bạn không?"
+                exampleVietnamese: "Tôi có thể vuốt ve con chó của bạn không?"
             },
 
             {
-                word: "pet",
-                type: "Adjective",
-                meaning: "được yêu thích",
-                exampleEnglish: "This is my pet project.",
-                exampleVietnamese: "Đây là dự án tâm huyết của tôi."
+                word: "petting",
+                pronunciation: "/ˈpetɪŋ/",
+                type: "noun",
+                meaning: "sự vuốt ve",
+                exampleEnglish: "The dog enjoys petting.",
+                exampleVietnamese: "Con chó thích được vuốt ve."
             }
 
         ],
@@ -54,18 +41,15 @@ const flashcards = [
 
             {
                 english: "Can I pet your dog?",
-                vietnamese:
-                    "Tôi có thể vuốt ve chó của bạn không?"
+                vietnamese: "Tôi có thể vuốt ve con chó của bạn không?"
             },
 
             {
-                english: "She is petting her cat.",
-                vietnamese:
-                    "Cô ấy đang vuốt ve con mèo của mình."
+                english: "She loves to pet her cat.",
+                vietnamese: "Cô ấy thích vuốt ve con mèo của mình."
             }
 
         ]
-
     },
 
 
@@ -73,54 +57,49 @@ const flashcards = [
         id: 2,
 
         word: "compare",
-
-        pronunciation: "/kəmˈpeə(r)/",
+        pronunciation: "/kəmˈpeər/",
 
         meaning: "so sánh",
 
         explanation:
-            "Compare được dùng khi đặt hai hoặc nhiều người, vật hoặc sự việc cạnh nhau để xem điểm giống và khác nhau.",
+            "Compare means to examine two or more things in order to discover their similarities and differences.",
 
         wordFamily: [
 
             {
                 word: "compare",
-                type: "Verb",
+                pronunciation: "/kəmˈpeər/",
+                type: "verb",
                 meaning: "so sánh",
-                exampleEnglish:
-                    "Let's compare these two products.",
-                exampleVietnamese:
-                    "Hãy so sánh hai sản phẩm này."
+                exampleEnglish: "We need to compare these two products.",
+                exampleVietnamese: "Chúng ta cần so sánh hai sản phẩm này."
             },
 
             {
                 word: "comparison",
-                type: "Noun",
+                pronunciation: "/kəmˈpærɪsən/",
+                type: "noun",
                 meaning: "sự so sánh",
-                exampleEnglish:
-                    "The comparison shows a clear difference.",
-                exampleVietnamese:
-                    "Sự so sánh cho thấy một sự khác biệt rõ ràng."
+                exampleEnglish: "This comparison is useful.",
+                exampleVietnamese: "Sự so sánh này rất hữu ích."
             },
 
             {
                 word: "comparative",
-                type: "Adjective",
-                meaning: "mang tính so sánh",
-                exampleEnglish:
-                    "This study provides a comparative analysis.",
-                exampleVietnamese:
-                    "Nghiên cứu này cung cấp một phân tích mang tính so sánh."
+                pronunciation: "/kəmˈpærətɪv/",
+                type: "adjective / noun",
+                meaning: "mang tính so sánh; dạng so sánh",
+                exampleEnglish: "The comparative form is used here.",
+                exampleVietnamese: "Dạng so sánh được sử dụng ở đây."
             },
 
             {
                 word: "comparatively",
-                type: "Adverb",
-                meaning: "một cách tương đối",
-                exampleEnglish:
-                    "The new model is comparatively cheap.",
-                exampleVietnamese:
-                    "Mẫu mới có giá tương đối rẻ."
+                pronunciation: "/kəmˈpærətɪvli/",
+                type: "adverb",
+                meaning: "tương đối, xét một cách so sánh",
+                exampleEnglish: "The new model is comparatively cheaper.",
+                exampleVietnamese: "Mẫu mới tương đối rẻ hơn."
             }
 
         ],
@@ -128,21 +107,16 @@ const flashcards = [
         examples: [
 
             {
-                english:
-                    "We need to compare the two options.",
-                vietnamese:
-                    "Chúng ta cần so sánh hai lựa chọn."
+                english: "Let's compare these two products.",
+                vietnamese: "Hãy so sánh hai sản phẩm này."
             },
 
             {
-                english:
-                    "Don't compare yourself with others.",
-                vietnamese:
-                    "Đừng so sánh bản thân với người khác."
+                english: "It is difficult to compare the two companies.",
+                vietnamese: "Rất khó để so sánh hai công ty."
             }
 
         ]
-
     },
 
 
@@ -150,44 +124,40 @@ const flashcards = [
         id: 3,
 
         word: "accurate",
-
         pronunciation: "/ˈækjərət/",
 
         meaning: "chính xác",
 
         explanation:
-            "Accurate dùng để mô tả thông tin, số liệu hoặc mô tả đúng với thực tế.",
+            "Accurate describes information, measurements, or results that are correct and free from mistakes.",
 
         wordFamily: [
 
             {
                 word: "accurate",
-                type: "Adjective",
+                pronunciation: "/ˈækjərət/",
+                type: "adjective",
                 meaning: "chính xác",
-                exampleEnglish:
-                    "The information is accurate.",
-                exampleVietnamese:
-                    "Thông tin là chính xác."
-            },
-
-            {
-                word: "accuracy",
-                type: "Noun",
-                meaning: "độ chính xác",
-                exampleEnglish:
-                    "We need to improve the accuracy of the data.",
-                exampleVietnamese:
-                    "Chúng ta cần cải thiện độ chính xác của dữ liệu."
+                exampleEnglish: "The information is accurate.",
+                exampleVietnamese: "Thông tin này chính xác."
             },
 
             {
                 word: "accurately",
-                type: "Adverb",
+                pronunciation: "/ˈækjərətli/",
+                type: "adverb",
                 meaning: "một cách chính xác",
-                exampleEnglish:
-                    "The system accurately records the transaction.",
-                exampleVietnamese:
-                    "Hệ thống ghi nhận giao dịch một cách chính xác."
+                exampleEnglish: "The system accurately records the data.",
+                exampleVietnamese: "Hệ thống ghi nhận dữ liệu một cách chính xác."
+            },
+
+            {
+                word: "accuracy",
+                pronunciation: "/ˈækjərəsi/",
+                type: "noun",
+                meaning: "độ chính xác",
+                exampleEnglish: "We need to improve the accuracy of the data.",
+                exampleVietnamese: "Chúng ta cần cải thiện độ chính xác của dữ liệu."
             }
 
         ],
@@ -195,14 +165,16 @@ const flashcards = [
         examples: [
 
             {
-                english:
-                    "Please provide accurate information.",
-                vietnamese:
-                    "Vui lòng cung cấp thông tin chính xác."
+                english: "Please make sure the information is accurate.",
+                vietnamese: "Vui lòng đảm bảo thông tin là chính xác."
+            },
+
+            {
+                english: "The report contains accurate information.",
+                vietnamese: "Báo cáo chứa thông tin chính xác."
             }
 
         ]
-
     },
 
 
@@ -210,34 +182,40 @@ const flashcards = [
         id: 4,
 
         word: "sensitive",
-
         pronunciation: "/ˈsensətɪv/",
 
         meaning: "nhạy cảm",
 
         explanation:
-            "Sensitive thường được dùng để mô tả người, thông tin hoặc vấn đề cần được xử lý cẩn thận.",
+            "Sensitive can describe something that needs careful handling or a person who reacts strongly to things.",
 
         wordFamily: [
 
             {
                 word: "sensitive",
-                type: "Adjective",
+                pronunciation: "/ˈsensətɪv/",
+                type: "adjective",
                 meaning: "nhạy cảm",
-                exampleEnglish:
-                    "This is sensitive information.",
-                exampleVietnamese:
-                    "Đây là thông tin nhạy cảm."
+                exampleEnglish: "This information is sensitive.",
+                exampleVietnamese: "Thông tin này nhạy cảm."
             },
 
             {
                 word: "sensitivity",
-                type: "Noun",
+                pronunciation: "/ˌsensəˈtɪvəti/",
+                type: "noun",
                 meaning: "sự nhạy cảm",
-                exampleEnglish:
-                    "The system has high sensitivity.",
-                exampleVietnamese:
-                    "Hệ thống có độ nhạy cao."
+                exampleEnglish: "The system has high sensitivity.",
+                exampleVietnamese: "Hệ thống có độ nhạy cao."
+            },
+
+            {
+                word: "sensitively",
+                pronunciation: "/ˈsensətɪvli/",
+                type: "adverb",
+                meaning: "một cách nhạy cảm",
+                exampleEnglish: "The issue was handled sensitively.",
+                exampleVietnamese: "Vấn đề đã được xử lý một cách nhạy cảm."
             }
 
         ],
@@ -245,33 +223,35 @@ const flashcards = [
         examples: [
 
             {
-                english:
-                    "The User ID and password are case sensitive.",
-                vietnamese:
-                    "User ID và mật khẩu có phân biệt chữ hoa và chữ thường."
+                english: "The User ID and password are case sensitive.",
+                vietnamese: "User ID và mật khẩu phân biệt chữ hoa và chữ thường."
+            },
+
+            {
+                english: "This is sensitive information.",
+                vietnamese: "Đây là thông tin nhạy cảm."
             }
 
         ]
-
     }
 
 ];
 
 
-// ==========================================
-// SETTINGS
-// ==========================================
-
-const ITEMS_PER_PAGE = 20;
+// =========================================
+// VARIABLES
+// =========================================
 
 let currentPage = 1;
 
-let currentData = [...flashcards];
+const rowsPerPage = 20;
+
+let filteredFlashcards = [...flashcards];
 
 
-// ==========================================
-// DOM
-// ==========================================
+// =========================================
+// ELEMENTS
+// =========================================
 
 const tableBody =
     document.getElementById("flashcardTable");
@@ -285,90 +265,98 @@ const pagination =
 const emptyState =
     document.getElementById("emptyState");
 
-const tableContainer =
-    document.querySelector(".table-container");
+const addButton =
+    document.getElementById("addButton");
+
+const emptyAddButton =
+    document.getElementById("emptyAddButton");
 
 const themeToggle =
     document.getElementById("themeToggle");
 
 
-// ==========================================
-// RENDER LIST
-// ==========================================
+// =========================================
+// DISPLAY LIST
+// =========================================
 
 function renderFlashcards() {
 
     tableBody.innerHTML = "";
 
     const start =
-        (currentPage - 1) * ITEMS_PER_PAGE;
+        (currentPage - 1) * rowsPerPage;
 
     const end =
-        start + ITEMS_PER_PAGE;
+        start + rowsPerPage;
 
-    const pageData =
-        currentData.slice(start, end);
+    const currentItems =
+        filteredFlashcards.slice(start, end);
 
 
-    if (pageData.length === 0) {
-
-        tableContainer.style.display = "none";
+    if (currentItems.length === 0) {
 
         emptyState.style.display = "block";
 
-        pagination.innerHTML = "";
+        document.querySelector(".table-container").style.display =
+            "none";
+
+        pagination.style.display = "none";
 
         return;
 
     }
 
 
-    tableContainer.style.display = "block";
-
     emptyState.style.display = "none";
 
+    document.querySelector(".table-container").style.display =
+        "block";
 
-    pageData.forEach((card, index) => {
+    pagination.style.display = "flex";
+
+
+    currentItems.forEach((card, index) => {
 
         const row =
             document.createElement("tr");
 
+        const number =
+            start + index + 1;
 
-        const familyText =
+        const familyCount =
             card.wordFamily
-                .map(item => item.word)
-                .filter(
-                    (word, index, array) =>
-                        array.indexOf(word) === index
-                )
-                .join(", ");
+                ? card.wordFamily.length
+                : 0;
 
 
         row.innerHTML = `
 
+            <td>${number}</td>
+
             <td>
-                ${start + index + 1}
+                <strong>${card.word}</strong>
+
+                <div class="list-pronunciation">
+                    ${card.pronunciation}
+                </div>
             </td>
 
-            <td class="word-cell">
-                ${card.word}
-            </td>
-
-            <td class="meaning-cell">
+            <td>
                 ${card.meaning}
             </td>
 
-            <td class="family-cell">
-                ${familyText}
+            <td>
+                ${familyCount} word${familyCount !== 1 ? "s" : ""}
             </td>
 
         `;
 
 
-        row.addEventListener(
-            "click",
-            () => showFlashcardDetail(card)
-        );
+        row.addEventListener("click", () => {
+
+            showFlashcardDetail(card);
+
+        });
 
 
         tableBody.appendChild(row);
@@ -381,9 +369,9 @@ function renderFlashcards() {
 }
 
 
-// ==========================================
+// =========================================
 // PAGINATION
-// ==========================================
+// =========================================
 
 function renderPagination() {
 
@@ -391,202 +379,97 @@ function renderPagination() {
 
     const totalPages =
         Math.ceil(
-            currentData.length /
-            ITEMS_PER_PAGE
+            filteredFlashcards.length / rowsPerPage
         );
 
 
     if (totalPages <= 1) {
-
         return;
-
     }
 
 
-    const previousButton =
-        createPageButton(
-            "‹",
-            currentPage === 1
-        );
+    for (let page = 1; page <= totalPages; page++) {
 
+        const button =
+            document.createElement("button");
 
-    previousButton.addEventListener(
-        "click",
-        () => {
-
-            if (currentPage > 1) {
-
-                currentPage--;
-
-                renderFlashcards();
-
-            }
-
-        }
-    );
-
-
-    pagination.appendChild(previousButton);
-
-
-    for (
-        let page = 1;
-        page <= totalPages;
-        page++
-    ) {
-
-        const pageButton =
-            createPageButton(
-                page,
-                false
-            );
-
+        button.textContent = page;
 
         if (page === currentPage) {
 
-            pageButton.classList.add("active");
+            button.classList.add("active");
 
         }
 
 
-        pageButton.addEventListener(
-            "click",
-            () => {
+        button.addEventListener("click", () => {
 
-                currentPage = page;
+            currentPage = page;
 
-                renderFlashcards();
+            renderFlashcards();
 
-            }
-        );
+        });
 
 
-        pagination.appendChild(pageButton);
+        pagination.appendChild(button);
 
     }
 
-
-    const nextButton =
-        createPageButton(
-            "›",
-            currentPage === totalPages
-        );
-
-
-    nextButton.addEventListener(
-        "click",
-        () => {
-
-            if (currentPage < totalPages) {
-
-                currentPage++;
-
-                renderFlashcards();
-
-            }
-
-        }
-    );
-
-
-    pagination.appendChild(nextButton);
-
 }
 
 
-function createPageButton(
-    text,
-    disabled
-) {
-
-    const button =
-        document.createElement("button");
-
-    button.className =
-        "page-button";
-
-    button.textContent =
-        text;
-
-    button.disabled =
-        disabled;
-
-    return button;
-
-}
-
-
-// ==========================================
+// =========================================
 // SEARCH
-// ==========================================
+// =========================================
 
 searchInput.addEventListener(
     "input",
-    () => {
+    function () {
 
         const keyword =
-            searchInput.value
-                .trim()
-                .toLowerCase();
+            this.value
+                .toLowerCase()
+                .trim();
 
 
-        if (!keyword) {
+        filteredFlashcards =
+            flashcards.filter(card => {
 
-            currentData =
-                [...flashcards];
+                const mainText = [
 
-        } else {
+                    card.word,
 
-            currentData =
-                flashcards.filter(card => {
+                    card.meaning,
 
-                    const word =
-                        card.word.toLowerCase();
+                    card.explanation,
 
-                    const meaning =
-                        card.meaning.toLowerCase();
+                    ...(card.wordFamily || [])
+                        .flatMap(item => [
 
-                    const family =
-                        card.wordFamily
-                            .map(item =>
-                                `
-                                ${item.word}
-                                ${item.type}
-                                ${item.meaning}
-                                ${item.exampleEnglish}
-                                ${item.exampleVietnamese}
-                                `
-                            )
-                            .join(" ")
-                            .toLowerCase();
+                            item.word,
+                            item.meaning,
+                            item.type,
+                            item.exampleEnglish,
+                            item.exampleVietnamese
 
-                    const examples =
-                        card.examples
-                            .map(example =>
-                                `
-                                ${example.english}
-                                ${example.vietnamese}
-                                `
-                            )
-                            .join(" ")
-                            .toLowerCase();
+                        ]),
+
+                    ...(card.examples || [])
+                        .flatMap(example => [
+
+                            example.english,
+                            example.vietnamese
+
+                        ])
+
+                ]
+                    .join(" ")
+                    .toLowerCase();
 
 
-                    return (
+                return mainText.includes(keyword);
 
-                        word.includes(keyword) ||
-
-                        meaning.includes(keyword) ||
-
-                        family.includes(keyword) ||
-
-                        examples.includes(keyword)
-
-                    );
-
-                });
-
-        }
+            });
 
 
         currentPage = 1;
@@ -597,229 +480,177 @@ searchInput.addEventListener(
 );
 
 
-// ==========================================
-// FLASHCARD DETAIL
-// ==========================================
+// =========================================
+// SHOW FLASHCARD DETAIL
+// =========================================
 
 function showFlashcardDetail(card) {
 
-    const familyRows =
-        card.wordFamily
-            .map(item => {
-
-                return `
-
-                    <tr>
-
-                        <td>
-                            <strong>
-                                ${item.word}
-                            </strong>
-                        </td>
-
-                        <td>
-                            ${item.type}
-                        </td>
-
-                        <td>
-                            ${item.meaning}
-                        </td>
-
-                        <td>
-                            ${item.exampleEnglish}
-                            <br>
-
-                            <span class="muted-text">
-                                ${item.exampleVietnamese}
-                            </span>
-                        </td>
-
-                    </tr>
-
-                `;
-
-            })
-            .join("");
+    const app =
+        document.querySelector(".app");
 
 
-    const exampleCards =
-        card.examples
-            .map(example => {
+    app.innerHTML = `
 
-                return `
+        <div class="flashcard-detail-card">
 
-                    <div
-                        class="example-card"
-                        style="
-                            padding: 16px;
-                            margin-bottom: 12px;
-                            border: 1px solid #e5e7eb;
-                            border-radius: 8px;
-                            background: #f9fafb;
-                        "
-                    >
-
-                        <div
-                            class="example-english"
-                            style="
-                                font-weight: 600;
-                                margin-bottom: 6px;
-                            "
-                        >
-                            ${example.english}
-                        </div>
-
-                        <div
-                            class="example-vietnamese"
-                            style="
-                                color: #6b7280;
-                            "
-                        >
-                            ${example.vietnamese}
-                        </div>
-
-                    </div>
-
-                `;
-
-            })
-            .join("");
-
-
-    tableContainer.style.display = "none";
-
-    pagination.style.display = "none";
-
-    emptyState.style.display = "block";
-
-
-    emptyState.innerHTML = `
-
-        <div
-            style="
-                max-width: 900px;
-                margin: 0 auto;
-                text-align: left;
-            "
-        >
+            <!-- BACK -->
 
             <button
                 id="backButton"
-                class="primary-button"
-                style="
-                    margin-bottom: 24px;
-                "
+                class="back-button"
             >
                 ← Back to Flashcards
             </button>
 
 
-            <div
-                class="flashcard-detail-card"
-                style="
-                    background: white;
-                    padding: 32px;
-                    border-radius: 12px;
-                    border: 1px solid #e5e7eb;
-                "
-            >
+            <!-- WORD -->
 
-                <!-- WORD -->
+            <div class="flashcard-header">
 
-                <h1
-                    style="
-                        font-size: 38px;
-                        margin-bottom: 8px;
-                    "
-                >
+                <h1>
                     ${card.word}
                 </h1>
 
-
-                <div
-                    class="muted-text"
-                    style="
-                        color: #6b7280;
-                        margin-bottom: 24px;
-                    "
-                >
+                <div class="main-pronunciation">
                     ${card.pronunciation}
                 </div>
 
+            </div>
 
-                <!-- MEANING -->
 
-                <h3 style="margin-bottom: 8px;">
-                    Meaning
-                </h3>
+            <!-- MEANING -->
 
-                <p style="margin-bottom: 20px;">
+            <section class="detail-section">
+
+                <h2>Meaning</h2>
+
+                <p class="main-meaning">
                     ${card.meaning}
                 </p>
 
-
-                <!-- EXPLANATION -->
-
-                <h3 style="margin-bottom: 8px;">
-                    Explanation
-                </h3>
-
-                <p
-                    style="
-                        line-height: 1.7;
-                        margin-bottom: 28px;
-                    "
-                >
+                <p class="explanation">
                     ${card.explanation}
                 </p>
 
-
-                <!-- WORD FAMILY -->
-
-                <h3 style="margin-bottom: 12px;">
-                    Word Family
-                </h3>
+            </section>
 
 
-                <div
-                    class="word-family-table"
-                    style="
-                        overflow-x: auto;
-                        border: 1px solid #e5e7eb;
-                        border-radius: 8px;
-                        margin-bottom: 30px;
-                    "
-                >
+            <!-- EXAMPLES -->
+            <!-- Examples are intentionally BEFORE Word Family -->
 
-                    <table>
+            <section class="detail-section">
+
+                <h2>Examples</h2>
+
+                <div class="examples-list">
+
+                    ${(card.examples || [])
+                        .map(example => `
+
+                            <div class="example-card">
+
+                                <div class="example-english">
+                                    ${example.english}
+                                </div>
+
+                                <div class="example-vietnamese">
+                                    ${example.vietnamese}
+                                </div>
+
+                            </div>
+
+                        `)
+                        .join("")}
+
+                </div>
+
+            </section>
+
+
+            <!-- WORD FAMILY -->
+
+            <section class="detail-section">
+
+                <h2>Word Family</h2>
+
+                <div class="word-family-table-wrapper">
+
+                    <table class="word-family-table">
 
                         <thead>
 
                             <tr>
 
-                                <th>
-                                    Word
-                                </th>
+                                <th>Word</th>
 
-                                <th>
-                                    Part of Speech
-                                </th>
+                                <th>IPA / Cách đọc</th>
 
-                                <th>
-                                    Meaning
-                                </th>
+                                <th>Part of Speech</th>
 
-                                <th>
-                                    Example
-                                </th>
+                                <th>Meaning</th>
 
                             </tr>
 
                         </thead>
 
+
                         <tbody>
 
-                            ${familyRows}
+                            ${(card.wordFamily || [])
+                                .map(item => `
+
+                                    <tr>
+
+                                        <td>
+
+                                            <strong>
+                                                ${item.word}
+                                            </strong>
+
+                                            <div class="family-example">
+
+                                                <span class="example-label">
+                                                    Example:
+                                                </span>
+
+                                                ${item.exampleEnglish}
+
+                                                <div class="family-example-vietnamese">
+
+                                                    → ${item.exampleVietnamese}
+
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+
+                                        <td class="family-pronunciation">
+
+                                            ${item.pronunciation || "-"}
+
+                                        </td>
+
+
+                                        <td>
+
+                                            ${item.type}
+
+                                        </td>
+
+
+                                        <td>
+
+                                            ${item.meaning}
+
+                                        </td>
+
+                                    </tr>
+
+                                `)
+                                .join("")}
 
                         </tbody>
 
@@ -827,34 +658,7 @@ function showFlashcardDetail(card) {
 
                 </div>
 
-
-                <!-- EXAMPLES -->
-
-                <h3 style="margin-bottom: 12px;">
-                    Examples
-                </h3>
-
-
-                <div>
-
-                    ${exampleCards}
-
-                </div>
-
-
-                <!-- BACK -->
-
-                <button
-                    id="backButton2"
-                    class="primary-button"
-                    style="
-                        margin-top: 12px;
-                    "
-                >
-                    ← Back to List
-                </button>
-
-            </div>
+            </section>
 
         </div>
 
@@ -863,89 +667,81 @@ function showFlashcardDetail(card) {
 
     document
         .getElementById("backButton")
-        .addEventListener(
-            "click",
-            backToList
-        );
+        .addEventListener("click", () => {
 
+            location.reload();
 
-    document
-        .getElementById("backButton2")
-        .addEventListener(
-            "click",
-            backToList
-        );
+        });
 
 }
 
 
-// ==========================================
-// BACK TO LIST
-// ==========================================
+// =========================================
+// ADD BUTTON
+// =========================================
 
-function backToList() {
+function addFlashcard() {
 
-    emptyState.innerHTML = `
-
-        <div class="empty-icon">
-            📚
-        </div>
-
-        <h2>
-            No Flashcards Yet
-        </h2>
-
-        <p>
-            Your English vocabulary collection
-            will appear here.
-        </p>
-
-        <button
-            id="emptyAddButton"
-            class="primary-button"
-        >
-            ＋ Add Your First Flashcard
-        </button>
-
-    `;
-
-
-    pagination.style.display = "flex";
-
-    renderFlashcards();
+    alert(
+        "Add Flashcard sẽ được xây dựng ở bước tiếp theo."
+    );
 
 }
 
 
-// ==========================================
+if (addButton) {
+
+    addButton.addEventListener(
+        "click",
+        addFlashcard
+    );
+
+}
+
+
+if (emptyAddButton) {
+
+    emptyAddButton.addEventListener(
+        "click",
+        addFlashcard
+    );
+
+}
+
+
+// =========================================
 // DARK MODE
-// ==========================================
+// =========================================
 
-themeToggle.addEventListener(
-    "click",
-    () => {
+if (themeToggle) {
 
-        document.body.classList.toggle("dark");
+    themeToggle.addEventListener(
+        "click",
+        () => {
+
+            document.body.classList.toggle("dark");
 
 
-        if (
-            document.body.classList.contains("dark")
-        ) {
+            if (
+                document.body.classList.contains("dark")
+            ) {
 
-            themeToggle.textContent = "☀️";
+                themeToggle.textContent = "☀️";
 
-        } else {
+            } else {
 
-            themeToggle.textContent = "🌙";
+                themeToggle.textContent = "🌙";
+
+            }
 
         }
+    );
 
-    }
-);
+}
 
 
-// ==========================================
+// =========================================
 // INITIAL LOAD
-// ==========================================
+// =========================================
 
 renderFlashcards();
