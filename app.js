@@ -795,6 +795,16 @@ function previewImportedFlashcard() {
 
     preview.innerHTML = "";
 
+    const saveButton =
+    document.getElementById("saveButton");
+
+
+saveButton.style.display =
+    "inline-flex";
+
+
+saveButton.onclick =
+    saveImportedFlashcard;
 
     const rawText =
         input.value.trim();
