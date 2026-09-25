@@ -1,241 +1,20 @@
 // =========================================
-// SAMPLE FLASHCARD DATA
+// ENGLISH FLASHCARDS
+// Main Application
 // =========================================
-
-const flashcards = [
-
-    {
-        id: 1,
-        word: "pet",
-        pronunciation: "/pet/",
-        meaning: "vuốt ve, cưng nựng; thú cưng",
-
-        explanation:
-            "Pet can be used as a verb meaning to touch or stroke an animal gently. It can also be used as a noun meaning an animal kept for companionship.",
-
-        wordFamily: [
-
-            {
-                word: "pet",
-                pronunciation: "/pet/",
-                type: "verb / noun",
-                meaning: "vuốt ve; thú cưng",
-                exampleEnglish: "Can I pet your dog?",
-                exampleVietnamese: "Tôi có thể vuốt ve con chó của bạn không?"
-            },
-
-            {
-                word: "petting",
-                pronunciation: "/ˈpetɪŋ/",
-                type: "noun",
-                meaning: "sự vuốt ve",
-                exampleEnglish: "The dog enjoys petting.",
-                exampleVietnamese: "Con chó thích được vuốt ve."
-            }
-
-        ],
-
-        examples: [
-
-            {
-                english: "Can I pet your dog?",
-                vietnamese: "Tôi có thể vuốt ve con chó của bạn không?"
-            },
-
-            {
-                english: "She loves to pet her cat.",
-                vietnamese: "Cô ấy thích vuốt ve con mèo của mình."
-            }
-
-        ]
-    },
-
-    {
-        id: 2,
-        word: "compare",
-        pronunciation: "/kəmˈpeər/",
-        meaning: "so sánh",
-
-        explanation:
-            "Compare means to examine two or more things in order to discover their similarities and differences.",
-
-        wordFamily: [
-
-            {
-                word: "compare",
-                pronunciation: "/kəmˈpeər/",
-                type: "verb",
-                meaning: "so sánh",
-                exampleEnglish: "We need to compare these two products.",
-                exampleVietnamese: "Chúng ta cần so sánh hai sản phẩm này."
-            },
-
-            {
-                word: "comparison",
-                pronunciation: "/kəmˈpærɪsən/",
-                type: "noun",
-                meaning: "sự so sánh",
-                exampleEnglish: "This comparison is useful.",
-                exampleVietnamese: "Sự so sánh này rất hữu ích."
-            },
-
-            {
-                word: "comparative",
-                pronunciation: "/kəmˈpærətɪv/",
-                type: "adjective / noun",
-                meaning: "mang tính so sánh; dạng so sánh",
-                exampleEnglish: "The comparative form is used here.",
-                exampleVietnamese: "Dạng so sánh được sử dụng ở đây."
-            },
-
-            {
-                word: "comparatively",
-                pronunciation: "/kəmˈpærətɪvli/",
-                type: "adverb",
-                meaning: "tương đối, xét một cách so sánh",
-                exampleEnglish: "The new model is comparatively cheaper.",
-                exampleVietnamese: "Mẫu mới tương đối rẻ hơn."
-            }
-
-        ],
-
-        examples: [
-
-            {
-                english: "Let's compare these two products.",
-                vietnamese: "Hãy so sánh hai sản phẩm này."
-            },
-
-            {
-                english: "It is difficult to compare the two companies.",
-                vietnamese: "Rất khó để so sánh hai công ty."
-            }
-
-        ]
-    },
-
-    {
-        id: 3,
-        word: "accurate",
-        pronunciation: "/ˈækjərət/",
-        meaning: "chính xác",
-
-        explanation:
-            "Accurate describes information, measurements, or results that are correct and free from mistakes.",
-
-        wordFamily: [
-
-            {
-                word: "accurate",
-                pronunciation: "/ˈækjərət/",
-                type: "adjective",
-                meaning: "chính xác",
-                exampleEnglish: "The information is accurate.",
-                exampleVietnamese: "Thông tin này chính xác."
-            },
-
-            {
-                word: "accurately",
-                pronunciation: "/ˈækjərətli/",
-                type: "adverb",
-                meaning: "một cách chính xác",
-                exampleEnglish: "The system accurately records the data.",
-                exampleVietnamese: "Hệ thống ghi nhận dữ liệu một cách chính xác."
-            },
-
-            {
-                word: "accuracy",
-                pronunciation: "/ˈækjərəsi/",
-                type: "noun",
-                meaning: "độ chính xác",
-                exampleEnglish: "We need to improve the accuracy of the data.",
-                exampleVietnamese: "Chúng ta cần cải thiện độ chính xác của dữ liệu."
-            }
-
-        ],
-
-        examples: [
-
-            {
-                english: "Please make sure the information is accurate.",
-                vietnamese: "Vui lòng đảm bảo thông tin là chính xác."
-            },
-
-            {
-                english: "The report contains accurate information.",
-                vietnamese: "Báo cáo chứa thông tin chính xác."
-            }
-
-        ]
-    },
-
-    {
-        id: 4,
-        word: "sensitive",
-        pronunciation: "/ˈsensətɪv/",
-        meaning: "nhạy cảm",
-
-        explanation:
-            "Sensitive can describe something that needs careful handling or a person who reacts strongly to things.",
-
-        wordFamily: [
-
-            {
-                word: "sensitive",
-                pronunciation: "/ˈsensətɪv/",
-                type: "adjective",
-                meaning: "nhạy cảm",
-                exampleEnglish: "This information is sensitive.",
-                exampleVietnamese: "Thông tin này nhạy cảm."
-            },
-
-            {
-                word: "sensitivity",
-                pronunciation: "/ˌsensəˈtɪvəti/",
-                type: "noun",
-                meaning: "sự nhạy cảm",
-                exampleEnglish: "The system has high sensitivity.",
-                exampleVietnamese: "Hệ thống có độ nhạy cao."
-            },
-
-            {
-                word: "sensitively",
-                pronunciation: "/ˈsensətɪvli/",
-                type: "adverb",
-                meaning: "một cách nhạy cảm",
-                exampleEnglish: "The issue was handled sensitively.",
-                exampleVietnamese: "Vấn đề đã được xử lý một cách nhạy cảm."
-            }
-
-        ],
-
-        examples: [
-
-            {
-                english: "The User ID and password are case sensitive.",
-                vietnamese: "User ID và mật khẩu phân biệt chữ hoa và chữ thường."
-            },
-
-            {
-                english: "This is sensitive information.",
-                vietnamese: "Đây là thông tin nhạy cảm."
-            }
-
-        ]
-    }
-
-];
 
 
 // =========================================
-// VARIABLES
+// CONFIGURATION
 // =========================================
 
 let currentPage = 1;
 
 const rowsPerPage = 20;
 
-let filteredFlashcards = [...flashcards];
+let flashcards = [];
+
+let filteredFlashcards = [];
 
 
 // =========================================
@@ -265,92 +44,257 @@ const themeToggle =
 
 
 // =========================================
-// DISPLAY LIST
+// LOAD FLASHCARDS FROM SUPABASE
+// =========================================
+
+async function loadFlashcards() {
+
+    try {
+
+        const {
+            data,
+            error
+        } = await supabaseClient
+
+            .from("flashcards")
+
+            .select(`
+                id,
+                word,
+                pronunciation,
+                meaning,
+                explanation,
+                notes,
+                tags,
+                created_at,
+                updated_at,
+                examples (
+                    id,
+                    english,
+                    vietnamese
+                ),
+                word_family (
+                    id,
+                    word,
+                    pronunciation,
+                    part_of_speech,
+                    meaning,
+                    example_english,
+                    example_vietnamese
+                )
+            `)
+
+            .order(
+                "created_at",
+                {
+                    ascending: false
+                }
+            );
+
+
+        if (error) {
+
+            console.error(
+                "Load Flashcards Error:",
+                error
+            );
+
+            alert(
+                "Không thể tải Flashcard từ Supabase.\n\n" +
+                error.message
+            );
+
+            return;
+
+        }
+
+
+        flashcards =
+            (data || []).map(card => ({
+
+                ...card,
+
+                examples:
+                    card.examples || [],
+
+                wordFamily:
+                    card.word_family || []
+
+            }));
+
+
+        filteredFlashcards =
+            [...flashcards];
+
+
+        currentPage = 1;
+
+        renderFlashcards();
+
+
+    } catch (loadError) {
+
+        console.error(
+            "Unexpected Load Error:",
+            loadError
+        );
+
+    }
+
+}
+
+
+// =========================================
+// DISPLAY FLASHCARD LIST
 // =========================================
 
 function renderFlashcards() {
 
     tableBody.innerHTML = "";
 
+
     const start =
-        (currentPage - 1) * rowsPerPage;
+        (currentPage - 1) *
+        rowsPerPage;
+
 
     const end =
-        start + rowsPerPage;
+        start +
+        rowsPerPage;
+
 
     const currentItems =
-        filteredFlashcards.slice(start, end);
+        filteredFlashcards.slice(
+            start,
+            end
+        );
 
 
-    if (currentItems.length === 0) {
+    // =========================================
+    // EMPTY STATE
+    // =========================================
 
-        emptyState.style.display = "block";
+    if (
+        currentItems.length === 0
+    ) {
 
-        document.querySelector(".table-container").style.display =
+        emptyState.style.display =
+            "block";
+
+
+        document
+            .querySelector(".table-container")
+            .style.display =
             "none";
 
-        pagination.style.display = "none";
+
+        pagination.style.display =
+            "none";
+
 
         return;
 
     }
 
 
-    emptyState.style.display = "none";
+    emptyState.style.display =
+        "none";
 
-    document.querySelector(".table-container").style.display =
+
+    document
+        .querySelector(".table-container")
+        .style.display =
         "block";
 
-    pagination.style.display = "flex";
+
+    pagination.style.display =
+        "flex";
 
 
-    currentItems.forEach((card, index) => {
+    // =========================================
+    // RENDER ROWS
+    // =========================================
 
-        const row =
-            document.createElement("tr");
+    currentItems.forEach(
+        (card, index) => {
 
-        const number =
-            start + index + 1;
-
-        const familyCount =
-            card.wordFamily
-                ? card.wordFamily.length
-                : 0;
+            const row =
+                document.createElement("tr");
 
 
-        row.innerHTML = `
-
-            <td>${number}</td>
-
-            <td>
-                <strong>${card.word}</strong>
-
-                <div class="list-pronunciation">
-                    ${card.pronunciation}
-                </div>
-            </td>
-
-            <td>
-                ${card.meaning}
-            </td>
-
-            <td>
-                ${familyCount} word${familyCount !== 1 ? "s" : ""}
-            </td>
-
-        `;
+            const number =
+                start +
+                index +
+                1;
 
 
-        row.addEventListener("click", () => {
+            const familyCount =
+                card.wordFamily
+                    ? card.wordFamily.length
+                    : 0;
 
-            showFlashcardDetail(card);
 
-        });
+            row.innerHTML = `
+
+                <td>
+                    ${number}
+                </td>
 
 
-        tableBody.appendChild(row);
+                <td>
 
-    });
+                    <strong>
+                        ${escapeHtml(card.word)}
+                    </strong>
+
+                    <div class="list-pronunciation">
+                        ${escapeHtml(
+                            card.pronunciation || ""
+                        )}
+                    </div>
+
+                </td>
+
+
+                <td>
+                    ${escapeHtml(
+                        card.meaning || ""
+                    )}
+                </td>
+
+
+                <td>
+
+                    ${familyCount}
+
+                    ${familyCount === 1
+                        ? "word"
+                        : "words"
+                    }
+
+                </td>
+
+            `;
+
+
+            row.addEventListener(
+                "click",
+                () => {
+
+                    showFlashcardDetail(
+                        card
+                    );
+
+                }
+            );
+
+
+            tableBody.appendChild(
+                row
+            );
+
+        }
+    );
 
 
     renderPagination();
@@ -366,43 +310,147 @@ function renderPagination() {
 
     pagination.innerHTML = "";
 
+
     const totalPages =
         Math.ceil(
-            filteredFlashcards.length / rowsPerPage
+            filteredFlashcards.length /
+            rowsPerPage
         );
 
 
     if (totalPages <= 1) {
+
         return;
+
     }
 
 
-    for (let page = 1; page <= totalPages; page++) {
+    // Previous button
+
+    const previousButton =
+        document.createElement(
+            "button"
+        );
+
+
+    previousButton.textContent =
+        "‹";
+
+
+    previousButton.disabled =
+        currentPage === 1;
+
+
+    previousButton.addEventListener(
+        "click",
+        () => {
+
+            if (
+                currentPage > 1
+            ) {
+
+                currentPage--;
+
+                renderFlashcards();
+
+            }
+
+        }
+    );
+
+
+    pagination.appendChild(
+        previousButton
+    );
+
+
+    // Page buttons
+
+    for (
+        let page = 1;
+        page <= totalPages;
+        page++
+    ) {
 
         const button =
-            document.createElement("button");
+            document.createElement(
+                "button"
+            );
 
-        button.textContent = page;
 
-        if (page === currentPage) {
+        button.textContent =
+            page;
 
-            button.classList.add("active");
+
+        if (
+            page === currentPage
+        ) {
+
+            button.classList.add(
+                "active"
+            );
 
         }
 
 
-        button.addEventListener("click", () => {
+        button.addEventListener(
+            "click",
+            () => {
 
-            currentPage = page;
+                currentPage =
+                    page;
 
-            renderFlashcards();
+                renderFlashcards();
 
-        });
+            }
+        );
 
 
-        pagination.appendChild(button);
+        pagination.appendChild(
+            button
+        );
 
     }
+
+
+    // Next button
+
+    const nextButton =
+        document.createElement(
+            "button"
+        );
+
+
+    nextButton.textContent =
+        "›";
+
+
+    nextButton.disabled =
+        currentPage === totalPages;
+
+
+    nextButton.addEventListener(
+        "click",
+        () => {
+
+            if (
+                currentPage <
+                totalPages
+            ) {
+
+                currentPage++;
+
+                renderFlashcards();
+
+            }
+
+        }
+    );
+
+
+    pagination.appendChild(
+        nextButton
+    );
 
 }
 
@@ -411,62 +459,91 @@ function renderPagination() {
 // SEARCH
 // =========================================
 
-searchInput.addEventListener(
-    "input",
-    function () {
+if (searchInput) {
 
-        const keyword =
-            this.value
-                .toLowerCase()
-                .trim();
+    searchInput.addEventListener(
+        "input",
+        function () {
 
-
-        filteredFlashcards =
-            flashcards.filter(card => {
-
-                const mainText = [
-
-                    card.word,
-
-                    card.meaning,
-
-                    card.explanation,
-
-                    ...(card.wordFamily || [])
-                        .flatMap(item => [
-
-                            item.word,
-                            item.meaning,
-                            item.type,
-                            item.exampleEnglish,
-                            item.exampleVietnamese
-
-                        ]),
-
-                    ...(card.examples || [])
-                        .flatMap(example => [
-
-                            example.english,
-                            example.vietnamese
-
-                        ])
-
-                ]
-                    .join(" ")
-                    .toLowerCase();
+            const keyword =
+                this.value
+                    .toLowerCase()
+                    .trim();
 
 
-                return mainText.includes(keyword);
+            filteredFlashcards =
+                flashcards.filter(
+                    card => {
 
-            });
+                        const mainText = [
+
+                            card.word,
+
+                            card.pronunciation,
+
+                            card.meaning,
+
+                            card.explanation,
+
+                            card.notes,
 
 
-        currentPage = 1;
+                            ...(card.wordFamily || [])
+                                .flatMap(
+                                    item => [
 
-        renderFlashcards();
+                                        item.word,
 
-    }
-);
+                                        item.pronunciation,
+
+                                        item.part_of_speech,
+
+                                        item.meaning,
+
+                                        item.example_english,
+
+                                        item.example_vietnamese
+
+                                    ]
+                                ),
+
+
+                            ...(card.examples || [])
+                                .flatMap(
+                                    example => [
+
+                                        example.english,
+
+                                        example.vietnamese
+
+                                    ]
+                                )
+
+                        ]
+
+                            .filter(Boolean)
+
+                            .join(" ")
+
+                            .toLowerCase();
+
+
+                        return mainText.includes(
+                            keyword
+                        );
+
+                    }
+                );
+
+
+            currentPage = 1;
+
+            renderFlashcards();
+
+        }
+    );
+
+}
 
 
 // =========================================
@@ -476,7 +553,9 @@ searchInput.addEventListener(
 function showFlashcardDetail(card) {
 
     const app =
-        document.querySelector(".app");
+        document.querySelector(
+            ".app"
+        );
 
 
     app.innerHTML = `
@@ -491,82 +570,158 @@ function showFlashcardDetail(card) {
             </button>
 
 
+            <!-- HEADER -->
+
             <div class="flashcard-header">
 
                 <h1>
-                    ${card.word}
+                    ${escapeHtml(
+                        card.word
+                    )}
                 </h1>
 
+
                 <div class="main-pronunciation">
-                    ${card.pronunciation}
+
+                    ${escapeHtml(
+                        card.pronunciation || ""
+                    )}
+
                 </div>
 
             </div>
 
 
+            <!-- MEANING -->
+
             <section class="detail-section">
 
-                <h2>Meaning</h2>
+                <h2>
+                    Meaning
+                </h2>
+
 
                 <p class="main-meaning">
-                    ${card.meaning}
+
+                    ${escapeHtml(
+                        card.meaning || ""
+                    )}
+
                 </p>
 
-                <p class="explanation">
-                    ${card.explanation}
-                </p>
+
+                ${
+                    card.explanation
+                        ? `
+                            <p class="explanation">
+                                ${escapeHtml(
+                                    card.explanation
+                                )}
+                            </p>
+                          `
+                        : ""
+                }
 
             </section>
 
 
+            <!-- EXAMPLES -->
+
             <section class="detail-section">
 
-                <h2>Examples</h2>
+                <h2>
+                    Examples
+                </h2>
+
 
                 <div class="examples-list">
 
-                    ${(card.examples || [])
-                        .map(example => `
+                    ${
+                        (card.examples || [])
+                            .length > 0
 
-                            <div class="example-card">
+                            ?
 
-                                <div class="example-english">
-                                    ${example.english}
-                                </div>
+                            card.examples
+                                .map(
+                                    example => `
 
-                                <div class="example-vietnamese">
-                                    ${example.vietnamese}
-                                </div>
+                                        <div class="example-card">
 
-                            </div>
+                                            <div class="example-english">
 
-                        `)
-                        .join("")}
+                                                ${escapeHtml(
+                                                    example.english
+                                                )}
+
+                                            </div>
+
+
+                                            <div class="example-vietnamese">
+
+                                                ${escapeHtml(
+                                                    example.vietnamese || ""
+                                                )}
+
+                                            </div>
+
+                                        </div>
+
+                                    `
+                                )
+                                .join("")
+
+                            :
+
+                            `
+                                <p>
+                                    No examples available.
+                                </p>
+                            `
+                    }
 
                 </div>
 
             </section>
 
 
+            <!-- WORD FAMILY -->
+
             <section class="detail-section">
 
-                <h2>Word Family</h2>
+                <h2>
+                    Word Family
+                </h2>
+
 
                 <div class="word-family-table-wrapper">
 
-                    <table class="word-family-table">
+                    <table
+                        class="word-family-table"
+                    >
 
                         <thead>
 
                             <tr>
 
-                                <th>Word</th>
+                                <th>
+                                    Word
+                                </th>
 
-                                <th>IPA / Cách đọc</th>
 
-                                <th>Part of Speech</th>
+                                <th>
+                                    IPA / Cách đọc
+                                </th>
 
-                                <th>Meaning</th>
+
+                                <th>
+                                    Part of Speech
+                                </th>
+
+
+                                <th>
+                                    Meaning
+                                </th>
 
                             </tr>
 
@@ -575,60 +730,95 @@ function showFlashcardDetail(card) {
 
                         <tbody>
 
-                            ${(card.wordFamily || [])
-                                .map(item => `
+                            ${
+                                (card.wordFamily || [])
+                                    .map(
+                                        item => `
 
-                                    <tr>
+                                            <tr>
 
-                                        <td>
+                                                <td>
 
-                                            <strong>
-                                                ${item.word}
-                                            </strong>
-
-                                            <div class="family-example">
-
-                                                <span class="example-label">
-                                                    Example:
-                                                </span>
-
-                                                ${item.exampleEnglish}
-
-                                                <div class="family-example-vietnamese">
-
-                                                    → ${item.exampleVietnamese}
-
-                                                </div>
-
-                                            </div>
-
-                                        </td>
+                                                    <strong>
+                                                        ${escapeHtml(
+                                                            item.word
+                                                        )}
+                                                    </strong>
 
 
-                                        <td class="family-pronunciation">
+                                                    ${
+                                                        item.example_english
+                                                            ? `
 
-                                            ${item.pronunciation || "-"}
+                                                                <div class="family-example">
 
-                                        </td>
-
-
-                                        <td>
-
-                                            ${item.type}
-
-                                        </td>
+                                                                    <span class="example-label">
+                                                                        Example:
+                                                                    </span>
 
 
-                                        <td>
+                                                                    ${escapeHtml(
+                                                                        item.example_english
+                                                                    )}
 
-                                            ${item.meaning}
 
-                                        </td>
+                                                                    ${
+                                                                        item.example_vietnamese
+                                                                            ? `
 
-                                    </tr>
+                                                                                <div class="family-example-vietnamese">
 
-                                `)
-                                .join("")}
+                                                                                    → ${escapeHtml(
+                                                                                        item.example_vietnamese
+                                                                                    )}
+
+                                                                                </div>
+
+                                                                            `
+                                                                            : ""
+                                                                    }
+
+                                                                </div>
+
+                                                            `
+                                                            : ""
+                                                    }
+
+                                                </td>
+
+
+                                                <td class="family-pronunciation">
+
+                                                    ${escapeHtml(
+                                                        item.pronunciation || "-"
+                                                    )}
+
+                                                </td>
+
+
+                                                <td>
+
+                                                    ${escapeHtml(
+                                                        item.part_of_speech || "-"
+                                                    )}
+
+                                                </td>
+
+
+                                                <td>
+
+                                                    ${escapeHtml(
+                                                        item.meaning || "-"
+                                                    )}
+
+                                                </td>
+
+                                            </tr>
+
+                                        `
+                                    )
+                                    .join("")
+                            }
 
                         </tbody>
 
@@ -638,30 +828,61 @@ function showFlashcardDetail(card) {
 
             </section>
 
+
+            ${
+                card.notes
+                    ? `
+
+                        <section class="detail-section">
+
+                            <h2>
+                                Notes
+                            </h2>
+
+
+                            <p>
+                                ${escapeHtml(
+                                    card.notes
+                                )}
+                            </p>
+
+                        </section>
+
+                      `
+                    : ""
+            }
+
         </div>
 
     `;
 
 
     document
-        .getElementById("backButton")
-        .addEventListener("click", () => {
+        .getElementById(
+            "backButton"
+        )
+        .addEventListener(
+            "click",
+            () => {
 
-            location.reload();
+                location.reload();
 
-        });
+            }
+        );
 
 }
 
 
 // =========================================
-// ADD FLASHCARD
+// ADD FLASHCARD PAGE
 // =========================================
 
 function showAddFlashcard() {
 
     const app =
-        document.querySelector(".app");
+        document.querySelector(
+            ".app"
+        );
 
 
     app.innerHTML = `
@@ -678,7 +899,10 @@ function showAddFlashcard() {
 
             <div class="import-header">
 
-                <h1>＋ Add Flashcard</h1>
+                <h1>
+                    ＋ Add Flashcard
+                </h1>
+
 
                 <p>
                     Paste the JSON generated by ChatGPT below.
@@ -689,7 +913,10 @@ function showAddFlashcard() {
 
             <div class="import-help">
 
-                <strong>How to use:</strong>
+                <strong>
+                    How to use:
+                </strong>
+
 
                 <ol>
 
@@ -697,16 +924,29 @@ function showAddFlashcard() {
                         Ask ChatGPT to create the Flashcard.
                     </li>
 
+
                     <li>
                         Copy the complete JSON.
                     </li>
+
 
                     <li>
                         Paste it into the box below.
                     </li>
 
+
                     <li>
                         Click Preview.
+                    </li>
+
+
+                    <li>
+                        Check the information.
+                    </li>
+
+
+                    <li>
+                        Click Save Flashcard.
                     </li>
 
                 </ol>
@@ -729,22 +969,24 @@ function showAddFlashcard() {
 
             <div class="import-actions">
 
-    <button
-        id="previewButton"
-        class="primary-button"
-    >
-        Preview
-    </button>
+                <button
+                    id="previewButton"
+                    class="primary-button"
+                >
+                    Preview
+                </button>
 
-    <button
-        id="saveButton"
-        class="secondary-button"
-        style="display: none;"
-    >
-        💾 Save Flashcard
-    </button>
 
-</div>
+                <button
+                    id="saveButton"
+                    class="primary-button"
+                    style="display: none;"
+                >
+                    💾 Save Flashcard
+                </button>
+
+            </div>
+
 
             <div
                 id="previewContainer"
@@ -756,20 +998,43 @@ function showAddFlashcard() {
     `;
 
 
-    document
-        .getElementById("importBackButton")
-        .addEventListener("click", () => {
-
-            location.reload();
-
-        });
-
+    // Back
 
     document
-        .getElementById("previewButton")
+        .getElementById(
+            "importBackButton"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                location.reload();
+
+            }
+        );
+
+
+    // Preview
+
+    document
+        .getElementById(
+            "previewButton"
+        )
         .addEventListener(
             "click",
             previewImportedFlashcard
+        );
+
+
+    // Save
+
+    document
+        .getElementById(
+            "saveButton"
+        )
+        .addEventListener(
+            "click",
+            saveImportedFlashcard
         );
 
 }
@@ -782,29 +1047,48 @@ function showAddFlashcard() {
 function previewImportedFlashcard() {
 
     const input =
-        document.getElementById("jsonInput");
+        document.getElementById(
+            "jsonInput"
+        );
+
 
     const error =
-        document.getElementById("importError");
+        document.getElementById(
+            "importError"
+        );
+
 
     const preview =
-        document.getElementById("previewContainer");
+        document.getElementById(
+            "previewContainer"
+        );
 
+
+    const saveButton =
+        document.getElementById(
+            "saveButton"
+        );
+
+
+    // Reset
 
     error.textContent = "";
 
     preview.innerHTML = "";
 
-    const saveButton =
-    document.getElementById("saveButton");
+    saveButton.style.display =
+        "none";
 
 
-saveButton.style.display =
-    "inline-flex";
+    saveButton.disabled =
+        false;
 
 
-saveButton.onclick =
-    saveImportedFlashcard;
+    saveButton.textContent =
+        "💾 Save Flashcard";
+
+
+    // Get JSON
 
     const rawText =
         input.value.trim();
@@ -820,14 +1104,25 @@ saveButton.onclick =
     }
 
 
+    // Parse JSON
+
     let data;
 
 
     try {
 
-        data = JSON.parse(rawText);
+        data =
+            JSON.parse(
+                rawText
+            );
 
-    } catch (e) {
+    } catch (parseError) {
+
+        console.error(
+            "JSON Parse Error:",
+            parseError
+        );
+
 
         error.textContent =
             "The pasted content is not valid JSON. Please copy the complete JSON from ChatGPT.";
@@ -835,6 +1130,413 @@ saveButton.onclick =
         return;
 
     }
+
+
+    // =========================================
+    // VALIDATE MAIN FIELDS
+    // =========================================
+
+    const requiredFields = [
+
+        "word",
+
+        "pronunciation",
+
+        "meaning",
+
+        "explanation",
+
+        "examples",
+
+        "wordFamily"
+
+    ];
+
+
+    const missingFields =
+        requiredFields.filter(
+            field =>
+                !(field in data)
+        );
+
+
+    if (
+        missingFields.length > 0
+    ) {
+
+        error.textContent =
+            "Missing fields: " +
+            missingFields.join(
+                ", "
+            );
+
+        return;
+
+    }
+
+
+    // =========================================
+    // VALIDATE EXAMPLES
+    // =========================================
+
+    if (
+        !Array.isArray(
+            data.examples
+        )
+    ) {
+
+        error.textContent =
+            "The 'examples' field must be an array.";
+
+        return;
+
+    }
+
+
+    for (
+        const example
+        of data.examples
+    ) {
+
+        if (
+            !example.english
+        ) {
+
+            error.textContent =
+                "Each example must have an English sentence.";
+
+            return;
+
+        }
+
+    }
+
+
+    // =========================================
+    // VALIDATE WORD FAMILY
+    // =========================================
+
+    if (
+        !Array.isArray(
+            data.wordFamily
+        )
+    ) {
+
+        error.textContent =
+            "The 'wordFamily' field must be an array.";
+
+        return;
+
+    }
+
+
+    for (
+        const item
+        of data.wordFamily
+    ) {
+
+        if (
+            !item.word
+        ) {
+
+            error.textContent =
+                "Each Word Family item must have a word.";
+
+            return;
+
+        }
+
+    }
+
+
+    // =========================================
+    // CREATE PREVIEW
+    // =========================================
+
+    preview.innerHTML = `
+
+        <div class="preview-title">
+
+            <span>
+                Preview
+            </span>
+
+
+            <span class="preview-valid">
+
+                ✓ Valid Flashcard
+
+            </span>
+
+        </div>
+
+
+        <div
+            class="flashcard-detail-card preview-flashcard"
+        >
+
+            <!-- HEADER -->
+
+            <div class="flashcard-header">
+
+                <h1>
+
+                    ${escapeHtml(
+                        data.word
+                    )}
+
+                </h1>
+
+
+                <div class="main-pronunciation">
+
+                    ${escapeHtml(
+                        data.pronunciation
+                    )}
+
+                </div>
+
+            </div>
+
+
+            <!-- MEANING -->
+
+            <section class="detail-section">
+
+                <h2>
+                    Meaning
+                </h2>
+
+
+                <p class="main-meaning">
+
+                    ${escapeHtml(
+                        data.meaning
+                    )}
+
+                </p>
+
+
+                <p class="explanation">
+
+                    ${escapeHtml(
+                        data.explanation
+                    )}
+
+                </p>
+
+            </section>
+
+
+            <!-- EXAMPLES -->
+
+            <section class="detail-section">
+
+                <h2>
+                    Examples
+                </h2>
+
+
+                <div class="examples-list">
+
+                    ${
+                        data.examples
+                            .map(
+                                example => `
+
+                                    <div class="example-card">
+
+                                        <div class="example-english">
+
+                                            ${escapeHtml(
+                                                example.english
+                                            )}
+
+                                        </div>
+
+
+                                        <div class="example-vietnamese">
+
+                                            ${escapeHtml(
+                                                example.vietnamese || ""
+                                            )}
+
+                                        </div>
+
+                                    </div>
+
+                                `
+                            )
+                            .join("")
+                    }
+
+                </div>
+
+            </section>
+
+
+            <!-- WORD FAMILY -->
+
+            <section class="detail-section">
+
+                <h2>
+                    Word Family
+                </h2>
+
+
+                <div class="word-family-table-wrapper">
+
+                    <table
+                        class="word-family-table"
+                    >
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Word
+                                </th>
+
+
+                                <th>
+                                    IPA / Cách đọc
+                                </th>
+
+
+                                <th>
+                                    Part of Speech
+                                </th>
+
+
+                                <th>
+                                    Meaning
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            ${
+                                data.wordFamily
+                                    .map(
+                                        item => `
+
+                                            <tr>
+
+                                                <td>
+
+                                                    <strong>
+
+                                                        ${escapeHtml(
+                                                            item.word
+                                                        )}
+
+                                                    </strong>
+
+
+                                                    ${
+                                                        item.exampleEnglish
+                                                            ? `
+
+                                                                <div class="family-example">
+
+                                                                    <span class="example-label">
+
+                                                                        Example:
+
+                                                                    </span>
+
+
+                                                                    ${escapeHtml(
+                                                                        item.exampleEnglish
+                                                                    )}
+
+
+                                                                    ${
+                                                                        item.exampleVietnamese
+                                                                            ? `
+
+                                                                                <div class="family-example-vietnamese">
+
+                                                                                    → ${escapeHtml(
+                                                                                        item.exampleVietnamese
+                                                                                    )}
+
+                                                                                </div>
+
+                                                                            `
+                                                                            : ""
+                                                                    }
+
+                                                                </div>
+
+                                                            `
+                                                            : ""
+                                                    }
+
+                                                </td>
+
+
+                                                <td class="family-pronunciation">
+
+                                                    ${escapeHtml(
+                                                        item.pronunciation || "-"
+                                                    )}
+
+                                                </td>
+
+
+                                                <td>
+
+                                                    ${escapeHtml(
+                                                        item.partOfSpeech || "-"
+                                                    )}
+
+                                                </td>
+
+
+                                                <td>
+
+                                                    ${escapeHtml(
+                                                        item.meaning || "-"
+                                                    )}
+
+                                                </td>
+
+                                            </tr>
+
+                                        `
+                                    )
+                                    .join("")
+                            }
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    `;
+
+
+    // =========================================
+    // SHOW SAVE BUTTON
+    // =========================================
+
+    saveButton.style.display =
+        "inline-flex";
+
+}
+
+
 // =========================================
 // SAVE FLASHCARD TO SUPABASE
 // =========================================
@@ -842,13 +1544,21 @@ saveButton.onclick =
 async function saveImportedFlashcard() {
 
     const input =
-        document.getElementById("jsonInput");
+        document.getElementById(
+            "jsonInput"
+        );
+
 
     const error =
-        document.getElementById("importError");
+        document.getElementById(
+            "importError"
+        );
+
 
     const saveButton =
-        document.getElementById("saveButton");
+        document.getElementById(
+            "saveButton"
+        );
 
 
     error.textContent = "";
@@ -868,14 +1578,21 @@ async function saveImportedFlashcard() {
     }
 
 
+    // =========================================
+    // PARSE JSON
+    // =========================================
+
     let data;
 
 
     try {
 
-        data = JSON.parse(rawText);
+        data =
+            JSON.parse(
+                rawText
+            );
 
-    } catch (e) {
+    } catch (parseError) {
 
         error.textContent =
             "Invalid JSON.";
@@ -886,68 +1603,125 @@ async function saveImportedFlashcard() {
 
 
     // =========================================
-    // VALIDATE DATA
+    // BASIC VALIDATION
     // =========================================
 
     if (
         !data.word ||
-        !data.meaning ||
-        !data.examples ||
-        !data.wordFamily
+        !data.meaning
     ) {
 
         error.textContent =
-            "The Flashcard data is incomplete.";
+            "The Flashcard must have at least Word and Meaning.";
 
         return;
 
     }
 
 
-    saveButton.disabled = true;
+    if (
+        !Array.isArray(
+            data.examples
+        )
+    ) {
 
-    saveButton.textContent = "Saving...";
+        error.textContent =
+            "The 'examples' field must be an array.";
+
+        return;
+
+    }
+
+
+    if (
+        !Array.isArray(
+            data.wordFamily
+        )
+    ) {
+
+        error.textContent =
+            "The 'wordFamily' field must be an array.";
+
+        return;
+
+    }
+
+
+    // =========================================
+    // DISABLE BUTTON
+    // =========================================
+
+    saveButton.disabled =
+        true;
+
+
+    saveButton.textContent =
+        "Saving...";
+
+
+    let flashcardId =
+        null;
 
 
     try {
 
         // =========================================
-        // 1. INSERT FLASHCARD
+        // 1. INSERT MAIN FLASHCARD
         // =========================================
 
-        const { data: flashcard, error: flashcardError } =
-            await supabaseClient
+        const {
+            data: flashcard,
+            error: flashcardError
+        } = await supabaseClient
 
-                .from("flashcards")
+            .from("flashcards")
 
-                .insert({
+            .insert({
 
-                    word: data.word,
+                word:
+                    data.word,
 
-                    pronunciation:
-                        data.pronunciation || null,
+                pronunciation:
+                    data.pronunciation ||
+                    null,
 
-                    meaning:
-                        data.meaning,
+                meaning:
+                    data.meaning,
 
-                    explanation:
-                        data.explanation || null
+                explanation:
+                    data.explanation ||
+                    null,
 
-                })
+                notes:
+                    data.notes ||
+                    null,
 
-                .select()
+                tags:
+                    Array.isArray(
+                        data.tags
+                    )
+                        ? data.tags
+                        : null
 
-                .single();
+            })
+
+            .select(
+                "id"
+            )
+
+            .single();
 
 
-        if (flashcardError) {
+        if (
+            flashcardError
+        ) {
 
             throw flashcardError;
 
         }
 
 
-        const flashcardId =
+        flashcardId =
             flashcard.id;
 
 
@@ -956,34 +1730,42 @@ async function saveImportedFlashcard() {
         // =========================================
 
         if (
-            Array.isArray(data.examples) &&
             data.examples.length > 0
         ) {
 
             const exampleRows =
-                data.examples.map(example => ({
+                data.examples
+                    .map(
+                        example => ({
 
-                    flashcard_id:
-                        flashcardId,
+                            flashcard_id:
+                                flashcardId,
 
-                    english:
-                        example.english,
+                            english:
+                                example.english,
 
-                    vietnamese:
-                        example.vietnamese || null
+                            vietnamese:
+                                example.vietnamese ||
+                                null
 
-                }));
-
-
-            const { error: examplesError } =
-                await supabaseClient
-
-                    .from("examples")
-
-                    .insert(exampleRows);
+                        })
+                    );
 
 
-            if (examplesError) {
+            const {
+                error: examplesError
+            } = await supabaseClient
+
+                .from("examples")
+
+                .insert(
+                    exampleRows
+                );
+
+
+            if (
+                examplesError
+            ) {
 
                 throw examplesError;
 
@@ -997,46 +1779,58 @@ async function saveImportedFlashcard() {
         // =========================================
 
         if (
-            Array.isArray(data.wordFamily) &&
             data.wordFamily.length > 0
         ) {
 
             const wordFamilyRows =
-                data.wordFamily.map(item => ({
+                data.wordFamily
+                    .map(
+                        item => ({
 
-                    flashcard_id:
-                        flashcardId,
+                            flashcard_id:
+                                flashcardId,
 
-                    word:
-                        item.word,
+                            word:
+                                item.word,
 
-                    pronunciation:
-                        item.pronunciation || null,
+                            pronunciation:
+                                item.pronunciation ||
+                                null,
 
-                    part_of_speech:
-                        item.partOfSpeech || null,
+                            part_of_speech:
+                                item.partOfSpeech ||
+                                null,
 
-                    meaning:
-                        item.meaning || null,
+                            meaning:
+                                item.meaning ||
+                                null,
 
-                    example_english:
-                        item.exampleEnglish || null,
+                            example_english:
+                                item.exampleEnglish ||
+                                null,
 
-                    example_vietnamese:
-                        item.exampleVietnamese || null
+                            example_vietnamese:
+                                item.exampleVietnamese ||
+                                null
 
-                }));
-
-
-            const { error: wordFamilyError } =
-                await supabaseClient
-
-                    .from("word_family")
-
-                    .insert(wordFamilyRows);
+                        })
+                    );
 
 
-            if (wordFamilyError) {
+            const {
+                error: wordFamilyError
+            } = await supabaseClient
+
+                .from("word_family")
+
+                .insert(
+                    wordFamilyRows
+                );
+
+
+            if (
+                wordFamilyError
+            ) {
 
                 throw wordFamilyError;
 
@@ -1054,10 +1848,12 @@ async function saveImportedFlashcard() {
         );
 
 
+        // Reload website
+
         location.reload();
 
 
-        } catch (saveError) {
+    } catch (saveError) {
 
         console.error(
             "Save Flashcard Error:",
@@ -1065,276 +1861,60 @@ async function saveImportedFlashcard() {
         );
 
 
+        // =========================================
+        // CLEANUP
+        // =========================================
+
+        /*
+         * If the main Flashcard was already created
+         * but Examples or Word Family failed,
+         * remove the main Flashcard again.
+         *
+         * This prevents incomplete records.
+         */
+
+        if (
+            flashcardId
+        ) {
+
+            try {
+
+                await supabaseClient
+
+                    .from("flashcards")
+
+                    .delete()
+
+                    .eq(
+                        "id",
+                        flashcardId
+                    );
+
+            } catch (cleanupError) {
+
+                console.error(
+                    "Cleanup Error:",
+                    cleanupError
+                );
+
+            }
+
+        }
+
+
         error.textContent =
             saveError.message ||
             "Failed to save Flashcard.";
 
 
-        saveButton.disabled = false;
+        saveButton.disabled =
+            false;
+
 
         saveButton.textContent =
             "💾 Save Flashcard";
 
     }
-
-}
-
-    // =========================================
-    // BASIC VALIDATION
-    // =========================================
-
-    const requiredFields = [
-
-        "word",
-        "pronunciation",
-        "meaning",
-        "explanation",
-        "examples",
-        "wordFamily"
-
-    ];
-
-
-    const missingFields =
-        requiredFields.filter(
-            field => !(field in data)
-        );
-
-
-    if (missingFields.length > 0) {
-
-        error.textContent =
-            "Missing fields: " +
-            missingFields.join(", ");
-
-        return;
-
-    }
-
-
-    if (!Array.isArray(data.examples)) {
-
-        error.textContent =
-            "The 'examples' field must be an array.";
-
-        return;
-
-    }
-
-
-    if (!Array.isArray(data.wordFamily)) {
-
-        error.textContent =
-            "The 'wordFamily' field must be an array.";
-
-        return;
-
-    }
-
-
-    // =========================================
-    // PREVIEW
-    // =========================================
-
-    preview.innerHTML = `
-
-        <div class="preview-title">
-
-            <span>Preview</span>
-
-            <span class="preview-valid">
-                ✓ Valid Flashcard
-            </span>
-
-        </div>
-
-
-        <div class="flashcard-detail-card preview-flashcard">
-
-            <div class="flashcard-header">
-
-                <h1>
-                    ${escapeHtml(data.word)}
-                </h1>
-
-                <div class="main-pronunciation">
-                    ${escapeHtml(data.pronunciation)}
-                </div>
-
-            </div>
-
-
-            <section class="detail-section">
-
-                <h2>Meaning</h2>
-
-                <p class="main-meaning">
-                    ${escapeHtml(data.meaning)}
-                </p>
-
-                <p class="explanation">
-                    ${escapeHtml(data.explanation)}
-                </p>
-
-            </section>
-
-
-            <section class="detail-section">
-
-                <h2>Examples</h2>
-
-                <div class="examples-list">
-
-                    ${data.examples
-                        .map(example => `
-
-                            <div class="example-card">
-
-                                <div class="example-english">
-                                    ${escapeHtml(example.english)}
-                                </div>
-
-                                <div class="example-vietnamese">
-                                    ${escapeHtml(example.vietnamese)}
-                                </div>
-
-                            </div>
-
-                        `)
-                        .join("")}
-
-                </div>
-
-            </section>
-
-
-            <section class="detail-section">
-
-                <h2>Word Family</h2>
-
-                <div class="word-family-table-wrapper">
-
-                    <table class="word-family-table">
-
-                        <thead>
-
-                            <tr>
-
-                                <th>Word</th>
-
-                                <th>IPA / Cách đọc</th>
-
-                                <th>Part of Speech</th>
-
-                                <th>Meaning</th>
-
-                            </tr>
-
-                        </thead>
-
-
-                        <tbody>
-
-                            ${data.wordFamily
-                                .map(item => `
-
-                                    <tr>
-
-                                        <td>
-
-                                            <strong>
-                                                ${escapeHtml(item.word)}
-                                            </strong>
-
-                                            <div class="family-example">
-
-                                                <span class="example-label">
-                                                    Example:
-                                                </span>
-
-                                                ${escapeHtml(item.exampleEnglish)}
-
-                                                <div class="family-example-vietnamese">
-
-                                                    → ${escapeHtml(item.exampleVietnamese)}
-
-                                                </div>
-
-                                            </div>
-
-                                        </td>
-
-
-                                        <td class="family-pronunciation">
-
-                                            ${escapeHtml(
-                                                item.pronunciation || "-"
-                                            )}
-
-                                        </td>
-
-
-                                        <td>
-
-                                            ${escapeHtml(
-                                                item.partOfSpeech || "-"
-                                            )}
-
-                                        </td>
-
-
-                                        <td>
-
-                                            ${escapeHtml(
-                                                item.meaning || "-"
-                                            )}
-
-                                        </td>
-
-                                    </tr>
-
-                                `)
-                                .join("")}
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-            </section>
-
-        </div>
-
-    `;
-
-}
-
-
-// =========================================
-// ESCAPE HTML
-// =========================================
-
-function escapeHtml(value) {
-
-    if (value === undefined || value === null) {
-
-        return "";
-
-    }
-
-
-    return String(value)
-
-        .replace(/&/g, "&amp;")
-
-        .replace(/</g, "&lt;")
-
-        .replace(/>/g, "&gt;")
-
-        .replace(/"/g, "&quot;")
-
-        .replace(/'/g, "&#039;");
 
 }
 
@@ -1373,18 +1953,24 @@ if (themeToggle) {
         "click",
         () => {
 
-            document.body.classList.toggle("dark");
+            document.body.classList.toggle(
+                "dark"
+            );
 
 
             if (
-                document.body.classList.contains("dark")
+                document.body.classList.contains(
+                    "dark"
+                )
             ) {
 
-                themeToggle.textContent = "☀️";
+                themeToggle.textContent =
+                    "☀️";
 
             } else {
 
-                themeToggle.textContent = "🌙";
+                themeToggle.textContent =
+                    "🌙";
 
             }
 
@@ -1392,42 +1978,65 @@ if (themeToggle) {
     );
 
 }
+
+
 // =========================================
-// TEST SUPABASE CONNECTION
+// ESCAPE HTML
 // =========================================
 
-async function testSupabaseConnection() {
+function escapeHtml(value) {
 
-    const { data, error } = await supabaseClient
-        .from("flashcards")
-        .select("id, word")
-        .limit(1);
+    if (
+        value === undefined ||
+        value === null
+    ) {
 
-
-    if (error) {
-
-        console.error(
-            "Supabase connection error:",
-            error
-        );
-
-        return;
+        return "";
 
     }
 
 
-    console.log(
-        "Supabase connected successfully:",
-        data
-    );
+    return String(value)
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
 
 }
 
 
-testSupabaseConnection();
-
 // =========================================
-// INITIAL LOAD
+// INITIALIZE APPLICATION
 // =========================================
 
-renderFlashcards();
+async function initializeApp() {
+
+    await loadFlashcards();
+
+}
+
+
+// Start
+
+initializeApp();
