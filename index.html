@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>English Flashcards</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div>
+                <h1>📚 English Flashcards</h1>
+                <p>Personal vocabulary library</p>
+            </div>
+
+            <button id="themeToggle" class="icon-button">
+                🌙
+            </button>
+
+        </header>
+
+
+        <!-- SEARCH + ADD -->
+        <section class="toolbar">
+
+            <div class="search-box">
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search word, meaning..."
+                >
+            </div>
+
+            <button id="addButton" class="primary-button">
+                ＋ Add Flashcard
+            </button>
+
+        </section>
+
+
+        <!-- FLASHCARD LIST -->
+        <main>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>#</th>
+                            <th>Word</th>
+                            <th>Meaning</th>
+                            <th>Word Family</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="flashcardTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- EMPTY STATE -->
+
+            <div id="emptyState" class="empty-state">
+
+                <div class="empty-icon">
+                    📚
+                </div>
+
+                <h2>No Flashcards Yet</h2>
+
+                <p>
+                    Your English vocabulary collection will appear here.
+                </p>
+
+                <button id="emptyAddButton" class="primary-button">
+                    ＋ Add Your First Flashcard
+                </button>
+
+            </div>
+
+
+            <!-- PAGINATION -->
+
+            <div id="pagination" class="pagination">
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="app.js"></script>
+
+</body>
+</html>
