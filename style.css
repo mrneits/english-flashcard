@@ -396,6 +396,10 @@ tbody tr:last-child td {
    DARK MODE
 ========================================= */
 
+/* =========================================
+   DARK MODE
+========================================= */
+
 body.dark {
     --background: #111827;
     --surface: #1f2937;
@@ -411,4 +415,75 @@ body.dark thead {
 
 body.dark .search-box input {
     color: var(--text);
+}
+
+body.dark .table-container {
+    background: var(--surface);
+    border-color: var(--border);
+}
+
+body.dark td,
+body.dark th {
+    border-color: var(--border);
+}
+
+body.dark tbody tr:hover {
+    background: var(--hover);
+}
+
+body.dark .empty-state {
+    color: var(--text);
+}
+
+
+/* Flashcard Detail */
+
+body.dark .flashcard-detail-card {
+    background: var(--surface) !important;
+    border-color: var(--border) !important;
+}
+
+body.dark .flashcard-detail-card h1,
+body.dark .flashcard-detail-card h2,
+body.dark .flashcard-detail-card h3,
+body.dark .flashcard-detail-card p,
+body.dark .flashcard-detail-card div {
+    color: var(--text);
+}
+
+body.dark .flashcard-detail-card .muted-text {
+    color: var(--muted);
+}
+
+
+/* Word Family */
+
+body.dark .word-family-table {
+    border-color: var(--border) !important;
+}
+
+body.dark .word-family-table th {
+    background: #172033;
+    color: var(--muted);
+}
+
+body.dark .word-family-table td {
+    color: var(--text);
+    border-color: var(--border);
+}
+
+
+/* Example */
+
+body.dark .example-card {
+    background: #172033 !important;
+    border-color: var(--border) !important;
+}
+
+body.dark .example-english {
+    color: var(--text);
+}
+
+body.dark .example-vietnamese {
+    color: var(--muted);
 }
