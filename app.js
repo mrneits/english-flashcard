@@ -1133,7 +1133,39 @@ if (themeToggle) {
     );
 
 }
+// =========================================
+// TEST SUPABASE CONNECTION
+// =========================================
 
+async function testSupabaseConnection() {
+
+    const { data, error } = await supabaseClient
+        .from("flashcards")
+        .select("id, word")
+        .limit(1);
+
+
+    if (error) {
+
+        console.error(
+            "Supabase connection error:",
+            error
+        );
+
+        return;
+
+    }
+
+
+    console.log(
+        "Supabase connected successfully:",
+        data
+    );
+
+}
+
+
+testSupabaseConnection();
 
 // =========================================
 // INITIAL LOAD
